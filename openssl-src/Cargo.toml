@@ -1,0 +1,41 @@
+[package]
+name = "openssl-src"
+version = "0.1.0+1.0.2h"
+authors = ["Alex Crichton <alex@alexcrichton.com>", "kyunghoon <kyunghoon@gmail.com>"]
+license = "MIT/Apache-2.0"
+readme = "README.md"
+edition = "2018"
+description = """
+Source of OpenSSL and logic to build it.
+"""
+exclude = [
+  'openssl/boringssl/*',
+  'openssl/fuzz/*',
+  'openssl/krb5/*',
+  'openssl/pyca-cryptography/*',
+  'openssl/test/*',
+]
+
+[features]
+default = []
+# Enables compilation of some older algorithms: md2 (hash), rc5 (block cypher) and enabled use of
+# some weaker algorithms in SSL connections. These are generally not recommended for use.
+weak-crypto = []
+# Enables compilation of the Camellia symmetric key block cypher. Since hardware acceleration for
+# it is not available on most systems, this is not as used as AES.
+camellia = []
+# Enables compilation of International Data Encryption Algorithm (IDEA), a symmetric key block
+# cypher sometimes used as an AES128 alternative.
+idea = []
+# Enables compilation of SEED, a symmetric key block cypher mostly used in South Korea, but
+# otherwise not widely supported.
+seed = []
+# Enables workaround for wsl2 on removable media, otherwise symlinks will fail
+wsl2-workaround = []
+
+
+[workspace]
+members = []
+
+[dependencies]
+cc = "1.0"
