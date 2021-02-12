@@ -1,7 +1,7 @@
 [package]
 name = "openssl10x-src"
-version = "0.1.4+1.0.2h"
-authors = ["kyunghoon <kyunghoon@gmail.com>"]
+version = "0.1.0+1.0.2h"
+authors = ["Alex Crichton <alex@alexcrichton.com>", "kyunghoon <kyunghoon@gmail.com>"]
 license = "MIT/Apache-2.0"
 readme = "README.md"
 edition = "2018"
@@ -32,6 +32,10 @@ idea = []
 seed = []
 # Enables workaround for wsl2 on removable media, otherwise symlinks will fail
 wsl2-workaround = []
+
+
+[workspace]
+members = []
 
 [dependencies]
 cc = "1.0"
