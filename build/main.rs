@@ -3,7 +3,6 @@
 extern crate autocfg;
 extern crate cc;
 #[cfg(feature = "vendored")]
-extern crate openssl10x_src;
 extern crate pkg_config;
 #[cfg(target_env = "msvc")]
 extern crate vcpkg;
@@ -14,6 +13,8 @@ use std::ffi::OsString;
 use std::path::{Path, PathBuf};
 
 mod cfgs;
+
+mod openssl_src;
 
 mod find_normal;
 #[cfg(feature = "vendored")]

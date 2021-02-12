@@ -1,6 +1,6 @@
 extern crate cc;
 
-use core::panic;
+//use std::core::panic;
 use std::env;
 use std::fs;
 use std::path::{Path, PathBuf};
