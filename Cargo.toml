@@ -1,6 +1,6 @@
 [package]
 name = "openssl10x-sys"
-version = "0.10.2"
+version = "0.10.3"
 authors = ["kyunghoon <kyunghoon@gmail.com>"]
 license = "MIT"
 description = "FFI bindings to OpenSSL 1.0.x"
@@ -9,6 +9,7 @@ links = "openssl"
 build = "build/main.rs"
 
 [features]
+default = ['vendored']
 vendored = ['openssl10x-src']
 # Enables workaround for wsl2 on removable media, otherwise symlinks will fail
 wsl2-workaround = ['openssl10x-src/wsl2-workaround']
