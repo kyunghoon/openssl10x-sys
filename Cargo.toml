@@ -1,6 +1,6 @@
 [package]
 name = "openssl10x-sys"
-version = "0.20.1"
+version = "0.21.1"
 authors = ["kyunghoon <kyunghoon@gmail.com>"]
 description = "FFI bindings to OpenSSL"
 repository = "https://github.com/sfackler/rust-openssl"
